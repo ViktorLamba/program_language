@@ -78,3 +78,26 @@ def deposit_calculator():
 
 # Запуск калькулятора
 deposit_calculator()
+
+
+#Задание 7
+from fractions import Fraction
+
+# Создание дробей
+frac1 = Fraction(3, 4)
+frac2 = Fraction(5, 6)
+
+print(f"Дробь 1: {frac1}")
+print(f"Дробь 2: {frac2}")
+
+# Выполнение операций
+addition = frac1 + frac2
+subtraction = frac1 - frac2
+multiplication = frac1 * frac2
+division = frac1 / frac2
+
+print(f"\nРезультаты операций:")
+print(f"Сложение: {addition}")
+print(f"Вычитание: {subtraction}")
+print(f"Умножение: {multiplication}")
+print(f"Деление: {division}")
