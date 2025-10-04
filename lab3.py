@@ -48,3 +48,33 @@ print("Первые 5 чисел Фибоначчи:")
 for num in fibonacci(5):
     print(num, end=" ")
 print()
+
+
+#Задание 6
+from decimal import Decimal, ROUND_HALF_UP
+
+def deposit_calculator():
+    # Ввод данных
+    initial_amount = Decimal(input("Введите начальную сумму вклада (руб): "))
+    interest_rate = Decimal(input("Введите годовую процентную ставку (%): "))
+    years = int(input("Введите срок вклада (лет): "))
+    
+    # Расчет по формуле ежемесячной капитализации
+    monthly_rate = interest_rate / Decimal('12') / Decimal('100')
+    months = years * 12
+    
+    # S = P × (1 + r/12)^(12×t)
+    final_amount = initial_amount * (1 + monthly_rate) ** months
+    final_amount = final_amount.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
+    
+    # Расчет прибыли
+    profit = final_amount - initial_amount
+    
+    # Вывод результатов
+    print(f"\nРезультаты расчета вклада:")
+    print(f"Начальная сумма: {initial_amount} руб.")
+    print(f"Итоговая сумма: {final_amount} руб.")
+    print(f"Общая прибыль: {profit} руб.")
+
+# Запуск калькулятора
+deposit_calculator()
