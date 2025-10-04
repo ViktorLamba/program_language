@@ -101,3 +101,14 @@ print(f"Сложение: {addition}")
 print(f"Вычитание: {subtraction}")
 print(f"Умножение: {multiplication}")
 print(f"Деление: {division}")
+
+
+#Задание 8
+from datetime import datetime
+
+# Текущая дата и время
+now = datetime.now()
+
+print("Текущая дата и время:", now)
+print("Только текущая дата:", now.date())
+print("Только текущее время:", now.time())
