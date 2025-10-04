@@ -112,3 +112,33 @@ now = datetime.now()
 print("Текущая дата и время:", now)
 print("Только текущая дата:", now.date())
 print("Только текущее время:", now.time())
+
+
+#Задание 9
+from datetime import datetime, date
+
+def calculate_birthday_info():
+    # Ввод дня рождения
+    birth_year = int(input("Введите год рождения: "))
+    birth_month = int(input("Введите месяц рождения: "))
+    birth_day = int(input("Введите день рождения: "))
+    
+    birth_date = date(birth_year, birth_month, birth_day)
+    today = date.today()
+    
+    # Сколько дней прошло с момента рождения
+    days_passed = (today - birth_date).days
+    
+    # Следующий день рождения
+    next_birthday = date(today.year, birth_month, birth_day)
+    if next_birthday < today:
+        next_birthday = date(today.year + 1, birth_month, birth_day)
+    
+    days_to_next_birthday = (next_birthday - today).days
+    
+    print(f"\nДень рождения: {birth_date}")
+    print(f"Дней прошло с рождения: {days_passed}")
+    print(f"Дней до следующего дня рождения: {days_to_next_birthday}")
+
+# Запуск расчета
+calculate_birthday_info()
