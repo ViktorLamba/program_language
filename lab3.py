@@ -32,3 +32,19 @@ print("Countdown от 5:")
 for x in Countdown(5):
     print(x, end=" ")
 print()
+
+
+#Задание 5
+def fibonacci(n):
+    a, b = 0, 1
+    count = 0
+    while count < n:
+        yield a
+        a, b = b, a + b
+        count += 1
+
+# Пример использования
+print("Первые 5 чисел Фибоначчи:")
+for num in fibonacci(5):
+    print(num, end=" ")
+print()
