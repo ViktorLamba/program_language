@@ -63,7 +63,7 @@ print(transport)
 print(car1)
 print(car2)
 print(bike)
-print()  # пустая строка для разделения
+print()  
 
 # Проверка работы методов move()
 print("Проверка методов move():")
@@ -71,24 +71,24 @@ transport.move()
 car1.move()
 car2.move()
 bike.move()
-print()  # пустая строка для разделения
+print()  
 
 # Проверка метода honk() для автомобиля
 print("Проверка метода honk() для автомобиля:")
 car1.honk()
-print()  # пустая строка для разделения
+print() 
 
 # Использование len(car) для автомобиля
 print("Количество мест в car1:", len(car1))
-print()  # пустая строка для разделения
+print()
 
 # Сравнение двух автомобилей (car1 == car2)
 print("Сравнение car1 == car2:", car1 == car2)
-print()  # пустая строка для разделения
+print()  
 
 # Сложение скоростей двух автомобилей (car1 + car2)
 print("Суммарная скорость car1 + car2:", car1 + car2)
-print()  # пустая строка для разделения
+print()  
 
 # Попытка сложить автомобиль и велосипед (car1 + bike)
 print("Попытка сложить автомобиль и велосипед:")
@@ -97,7 +97,7 @@ try:
     print("Суммарная скорость car1 + bike:", result)
 except TypeError as e:
     print("Ошибка при сложении car1 + bike:", e)
-print()  # пустая строка для разделения
+print() 
 
 # Создание списка объектов и вызов метода move() для каждого
 vehicles = [transport, car1, car2, bike]
